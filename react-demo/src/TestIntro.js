@@ -75,7 +75,7 @@ class TestIntro extends Component {
                     <InputGroup  border="info" className="mb-3">
                         <DropdownButton className="btn btn-secondary"
                         variant="outline-info"
-                        title="pair 1"
+                        title="pair 2"
                         id="input-group-dropdown-2"
                         >
                         <Dropdown.Item href="#">BTC</Dropdown.Item>
@@ -84,10 +84,27 @@ class TestIntro extends Component {
                         </DropdownButton>
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
-                    <label className="labelPool">Prices and pool share</label>   
-                    <label >0.0   0.0   0.0</label>
+                    <label className="labelPool">Prices and pool share</label>
+                    <div className="statsTable">
+                    <Table responsive="sm" className="statsTable">
+                    <thead>
+                    <tr  className="statsTable">
+                        <th>BUSD to BNB</th>
+                        <th>BNB to BUSD</th>
+                        <th>Share of pool</th>
+                    </tr>
+                    </thead>
+                    <tbody  className="statsTable">
+                    <tr  className="statsTable">
+                        <td>584.934</td>
+                        <td>0.00170959</td>
+                        <td>0%</td>
+                    </tr > 
+                    </tbody>
+                    </Table>  
                     <label></label>      
                     <br />
+                    </div>
                     <Button ariant="primary">Connect Wallet</Button>
                 </Card.Body>
                 </Card>
