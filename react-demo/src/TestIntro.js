@@ -16,25 +16,34 @@ class TestIntro extends Component {
                 },
                 {
                     element: "#input-group-dropdown-2",
-                    intro: "From this menu you can pick the second coin in your pair"
+                    intro: "From this menu you can pick the second coin in your pair. Most pools will force to put in the same amount into both coins."
                 },
                 {
                     element: "#input-group-dropdown-2",
-                    intro: "The crpyto you just entered would be locked in a contract"
+                    intro: "The crpyto you just entered would be locked in a contract."
                 },
                 {
-                    element: "#input-group-dropdown-2",
-                    intro: "Depending on how much you contibuted to the pool you will get tokens in return"
+                    element: "#ABpair",
+                    intro: "This means if coin A was 1, coin B would need to be this value."
+                },
+                {
+                    element: "#BApair",
+                    intro: "This means if coin B was 1, coin A would need to be this value."
+                },
+                {
+                    element: "#shareAmount",
+                    intro: "This shows how much of you are concributing to the pool, the higher the % the higher the returns."
+                },
+                
+                {
+                    element: ".connectButton",
+                    intro: "Once clicking this connect button you will need acess your wallet to provide the liquidity (for example metamask)."
+                },
+                {
+                    element: ".connectButton",
+                    intro: "Depending on how much you contibuted to the pool you will get tokens in return. As more people join your cut will decrease."
                 }
             ],
-            hintsEnabled: false,
-            hints: [
-                {
-                    element: ".hello",
-                    hint: "Hello hint",
-                    hintPosition: "middle-right"
-                }
-            ]
         };
     }
 
@@ -113,16 +122,16 @@ class TestIntro extends Component {
                     </thead>
                     <tbody  className="statsTable">
                     <tr  className="statsTable">
-                        <td>584.934</td>
-                        <td>0.00170959</td>
-                        <td>0%</td>
+                        <td id="ABpair">584.934</td>
+                        <td id="BApair">0.00170959</td>
+                        <td id="shareAmount">0%</td>
                     </tr > 
                     </tbody>
                     </Table>  
                     <label></label>      
                     <br />
                     </div>
-                    <Button ariant="primary">Connect Wallet</Button>
+                    <Button className="connectButton" ariant="primary">Connect Wallet</Button>
                 </Card.Body>
                 </Card>
 
