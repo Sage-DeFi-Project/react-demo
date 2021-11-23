@@ -16,11 +16,11 @@ class TestIntro extends Component {
                 },
                 {
                     element: "#input-group-dropdown-2",
-                    intro: "From this menu you can pick the second coin in your pair. Most pools will force to put in the same amount into both coins."
+                    intro: 'From this menu you can pick the second coin in your pair. Most pools will force to put in the same amount into both coins. '
                 },
                 {
                     element: "#input-group-dropdown-2",
-                    intro: "The crpyto you just entered would be locked in a contract."
+                    intro: '<img src="" /> The crpyto you just entered would be locked in a contract.'
                 },
                 {
                     element: "#ABpair",
