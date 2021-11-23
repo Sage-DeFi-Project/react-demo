@@ -59,7 +59,7 @@ class TestIntro extends Component {
 
                     <InputGroup colour="white" border="info" className="mb-3">
                         <DropdownButton
-                        variant="outline-secondary"
+                        variant="outline-info"
                         title="pair 1"
                         id="input-group-dropdown-1"
                         >
@@ -70,10 +70,10 @@ class TestIntro extends Component {
                         </DropdownButton>
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
-                    <label></label>
-                    <InputGroup colour="white" border="info" className="mb-3">
-                        <DropdownButton
-                        variant="outline-secondary"
+                    <label>+</label>
+                    <InputGroup  border="info" className="mb-3">
+                        <DropdownButton className="btn btn-secondary"
+                        variant="outline-info"
                         title="pair 1"
                         id="input-group-dropdown-1"
                         >
@@ -84,7 +84,9 @@ class TestIntro extends Component {
                         </DropdownButton>
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
-                    <label className="labelPool">Prices and pool share</label>         
+                    <label className="labelPool">Prices and pool share</label>   
+                    <label >0.0   0.0   0.0</label>
+                    <label></label>      
                     <br />
                     <Button ariant="primary">Connect Wallet</Button>
                 </Card.Body>
