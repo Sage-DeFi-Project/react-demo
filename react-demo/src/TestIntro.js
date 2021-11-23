@@ -17,6 +17,14 @@ class TestIntro extends Component {
                 {
                     element: "#input-group-dropdown-2",
                     intro: "From this menu you can pick the second coin in your pair"
+                },
+                {
+                    element: "#input-group-dropdown-2",
+                    intro: "The crpyto you just entered would be locked in a contract"
+                },
+                {
+                    element: "#input-group-dropdown-2",
+                    intro: "Depending on how much you contibuted to the pool you will get tokens in return"
                 }
             ],
             hintsEnabled: false,
@@ -59,7 +67,11 @@ class TestIntro extends Component {
                         Add Liquidity demo
                     </Card.Text>
 
-                    <InputGroup colour="white" border="info" className="mb-3">
+                    <InputGroup colour="white" border="info" className="mb-3" onKeyPress={(event) => {
+                    if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                    }
+                }}>
                         <DropdownButton
                         variant="outline-info"
                         title="pair 1"
@@ -72,7 +84,12 @@ class TestIntro extends Component {
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
                     <label>+</label>
-                    <InputGroup  border="info" className="mb-3">
+                   
+                    <InputGroup  border="info" className="mb-3" onKeyPress={(event) => {
+                    if (!/[0-9]/.test(event.key)) {
+                    event.preventDefault();
+                    }
+                }}>
                         <DropdownButton className="btn btn-secondary"
                         variant="outline-info"
                         title="pair 2"
