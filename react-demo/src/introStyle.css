@@ -1,6 +1,11 @@
 .MainCard {
-    background: #3b719f !important;
+    background: #003049 !important;
     border-radius: 10rem;
+    color: #FCBF49;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 3.5px;
+    text-align: center;
 }
 .labelPool {
     font-size: medium;

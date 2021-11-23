@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Steps } from "intro.js-react";
-import { Card, Button, InputGroup, Dropdown, DropdownButton, FormControl, Table} from 'react-bootstrap'
+import { Card, Button, InputGroup, Dropdown, DropdownButton, FormControl, Table } from 'react-bootstrap'
 import './introStyle.css'
 import 'bootstrap'
 class TestIntro extends Component {
@@ -34,7 +34,7 @@ class TestIntro extends Component {
                     element: "#shareAmount",
                     intro: "This shows how much of you are concributing to the pool, the higher the % the higher the returns."
                 },
-                
+
                 {
                     element: ".connectButton",
                     intro: "Once clicking this connect button you will need acess your wallet to provide the liquidity (for example metamask)."
@@ -55,9 +55,9 @@ class TestIntro extends Component {
     toggleSteps = () => {
         this.setState(prevState => ({ stepsEnabled: !prevState.stepsEnabled }));
     };
-    handleSelect=(e)=>{
+    handleSelect = (e) => {
         console.log(e);
-      }
+    }
 
 
     render() {
@@ -69,70 +69,70 @@ class TestIntro extends Component {
                     initialStep={this.state.initialStep}
                     onExit={this.onExit}
                 />
-                <Card className="MainCard" style={{ width: '25rem'}} >
-                <Card.Body>
-                    <Card.Title></Card.Title>
-                    <Card.Text>
-                        Add Liquidity demo
-                    </Card.Text>
+                <Card className="MainCard" style={{ width: '25rem' }} >
+                    <Card.Body>
+                        <Card.Title></Card.Title>
+                        <Card.Text>
+                            ADD LIQUIDITY DEMO
+                        </Card.Text>
 
-                    <InputGroup colour="white" border="info" className="mb-3" onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
-                    event.preventDefault();
-                    }
-                }}>
-                        <DropdownButton
-                        variant="outline-info"
-                        title="pair 1"
-                        id="input-group-dropdown-1"
-                        >
-                        <Dropdown.Item href="#">BTC</Dropdown.Item>
-                        <Dropdown.Item href="#">BNB</Dropdown.Item>
-                        <Dropdown.Item href="#">USDT</Dropdown.Item>
-                        </DropdownButton>
-                        <FormControl aria-label="Text input with dropdown button" />
-                    </InputGroup>
-                    <label>+</label>
-                   
-                    <InputGroup  border="info" className="mb-3" onKeyPress={(event) => {
-                    if (!/[0-9]/.test(event.key)) {
-                    event.preventDefault();
-                    }
-                }}>
-                        <DropdownButton className="btn btn-secondary"
-                        variant="outline-info"
-                        title="pair 2"
-                        id="input-group-dropdown-2"
-                        >
-                        <Dropdown.Item href="#">BTC</Dropdown.Item>
-                        <Dropdown.Item href="#">BNB</Dropdown.Item>
-                        <Dropdown.Item href="#">USDT</Dropdown.Item>
-                        </DropdownButton>
-                        <FormControl aria-label="Text input with dropdown button" />
-                    </InputGroup>
-                    <label className="labelPool">Prices and pool share</label>
-                    <div className="statsTable">
-                    <Table responsive="sm" className="statsTable">
-                    <thead>
-                    <tr  className="statsTable">
-                        <th>BUSD to BNB</th>
-                        <th>BNB to BUSD</th>
-                        <th>Share of pool</th>
-                    </tr>
-                    </thead>
-                    <tbody  className="statsTable">
-                    <tr  className="statsTable">
-                        <td id="ABpair">584.934</td>
-                        <td id="BApair">0.00170959</td>
-                        <td id="shareAmount">0%</td>
-                    </tr > 
-                    </tbody>
-                    </Table>  
-                    <label></label>      
-                    <br />
-                    </div>
-                    <Button className="connectButton" ariant="primary">Connect Wallet</Button>
-                </Card.Body>
+                        <InputGroup colour="white" border="info" className="mb-3" onKeyPress={(event) => {
+                            if (!/[0-9]/.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}>
+                            <DropdownButton
+                                variant="outline-info"
+                                title="pair 1"
+                                id="input-group-dropdown-1"
+                            >
+                                <Dropdown.Item href="#">BTC</Dropdown.Item>
+                                <Dropdown.Item href="#">BNB</Dropdown.Item>
+                                <Dropdown.Item href="#">USDT</Dropdown.Item>
+                            </DropdownButton>
+                            <FormControl aria-label="Text input with dropdown button" />
+                        </InputGroup>
+                        <label>+</label>
+
+                        <InputGroup border="info" className="mb-3" onKeyPress={(event) => {
+                            if (!/[0-9]/.test(event.key)) {
+                                event.preventDefault();
+                            }
+                        }}>
+                            <DropdownButton className="btn btn-secondary"
+                                variant="outline-info"
+                                title="pair 2"
+                                id="input-group-dropdown-2"
+                            >
+                                <Dropdown.Item href="#">BTC</Dropdown.Item>
+                                <Dropdown.Item href="#">BNB</Dropdown.Item>
+                                <Dropdown.Item href="#">USDT</Dropdown.Item>
+                            </DropdownButton>
+                            <FormControl aria-label="Text input with dropdown button" />
+                        </InputGroup>
+                        <label className="labelPool">Prices and pool share:</label>
+                        <div className="statsTable">
+                            <Table responsive="sm" className="statsTable">
+                                <thead>
+                                    <tr className="statsTable">
+                                        <th>BUSD to BNB</th>
+                                        <th>BNB to BUSD</th>
+                                        <th>Share of pool</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="statsTable">
+                                    <tr className="statsTable">
+                                        <td id="ABpair">584.934</td>
+                                        <td id="BApair">0.00170959</td>
+                                        <td id="shareAmount">0%</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                            <label></label>
+                            <br />
+                        </div>
+                        <Button className="connectButton" ariant="primary">Connect Wallet</Button>
+                    </Card.Body>
                 </Card>
 
             </div>
