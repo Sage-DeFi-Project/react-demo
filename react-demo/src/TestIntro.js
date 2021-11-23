@@ -11,12 +11,12 @@ class TestIntro extends Component {
             initialStep: 0,
             steps: [
                 {
-                    element: "#hello",
-                    intro: "Click on this to login"
+                    element: "#input-group-dropdown-1",
+                    intro: "From this menu you can pick the first coin in your pair"
                 },
                 {
-                    element: ".world",
-                    intro: "Click on this to view the tutorial again"
+                    element: "#input-group-dropdown-2",
+                    intro: "From this menu you can pick the second coin in your pair"
                 }
             ],
             hintsEnabled: false,
@@ -38,7 +38,9 @@ class TestIntro extends Component {
     toggleSteps = () => {
         this.setState(prevState => ({ stepsEnabled: !prevState.stepsEnabled }));
     };
-
+    handleSelect=(e)=>{
+        console.log(e);
+      }
 
 
     render() {
@@ -50,7 +52,7 @@ class TestIntro extends Component {
                     initialStep={this.state.initialStep}
                     onExit={this.onExit}
                 />
-                <Card className="MainCard" style={{ width: '40rem'}} >
+                <Card className="MainCard" style={{ width: '25rem'}} >
                 <Card.Body>
                     <Card.Title></Card.Title>
                     <Card.Text>
@@ -66,7 +68,6 @@ class TestIntro extends Component {
                         <Dropdown.Item href="#">BTC</Dropdown.Item>
                         <Dropdown.Item href="#">BNB</Dropdown.Item>
                         <Dropdown.Item href="#">USDT</Dropdown.Item>
-                        <Dropdown.Divider />
                         </DropdownButton>
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
@@ -75,12 +76,11 @@ class TestIntro extends Component {
                         <DropdownButton className="btn btn-secondary"
                         variant="outline-info"
                         title="pair 1"
-                        id="input-group-dropdown-1"
+                        id="input-group-dropdown-2"
                         >
                         <Dropdown.Item href="#">BTC</Dropdown.Item>
                         <Dropdown.Item href="#">BNB</Dropdown.Item>
                         <Dropdown.Item href="#">USDT</Dropdown.Item>
-                        <Dropdown.Divider />
                         </DropdownButton>
                         <FormControl aria-label="Text input with dropdown button" />
                     </InputGroup>
